@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Customer]
 (
-	[PersonID] INT NOT NULL PRIMARY KEY, 
+	[PersonID] INT NOT NULL PRIMARY KEY IDENTITY, 
     [FirstName] varchar(500) NULL, 
     [LastName] varchar(500) NULL, 
     [Age] int NULL, 

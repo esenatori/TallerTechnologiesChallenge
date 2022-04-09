@@ -57,4 +57,12 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Customer.sql" />
+    <Build Include="Orders.sql" />
+    <Build Include="OrderDetail.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TallerTechnologies.Challenge.SQL.refactorlog" />
+  </ItemGroup>
 </Project>
