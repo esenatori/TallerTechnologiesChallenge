@@ -14,6 +14,7 @@ namespace TallerTechnologies.Challenge.Program
 
             var a = progress.ConverToArray(number1);
             var b = progress.ConverToArray(number2);
+
             progress.Reverse(ref b);
 
             var d = progress.Sum(a, b);
@@ -23,13 +24,11 @@ namespace TallerTechnologies.Challenge.Program
 
         static void PrintNumber(int[] number)
         {
-            string ToPrint = "";
-
+            string ToPrint = ""; 
             foreach (var item in number)
             {
                 ToPrint = ToPrint + item;
-            }
-
+            } 
             Console.WriteLine(ToPrint);
         }
     }

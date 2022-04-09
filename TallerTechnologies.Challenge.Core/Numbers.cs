@@ -12,14 +12,14 @@ namespace TallerTechnologies.Challenge.Core
         {
             var a = numbers.ToCharArray();
             int[] b = new int[a.Length];
-            b= Array.ConvertAll(a, c=> (int)Char.GetNumericValue(c));
-            return b; 
+            b = Array.ConvertAll(a, c => (int)Char.GetNumericValue(c));
+            return b;
         }
 
         public void Reverse(ref int[] numbers)
         {
-            Array.Reverse(numbers); 
-        } 
+            Array.Reverse(numbers);
+        }
 
         public int[] Sum(int[] numbers1, int[] numbers2)
         {
@@ -30,11 +30,20 @@ namespace TallerTechnologies.Challenge.Core
             }
 
             int[] _result = new int[lenght];
-            
+
             for (int i = 0; i < lenght; i++)
             {
-                _result[i] = int.Parse(numbers1[i].ToString()) + int.Parse(numbers2[i].ToString());
-            }    
+                var firstnumber = 0;
+                var secondnumber = 0;
+
+                if (numbers1.Length > i)
+                    firstnumber = int.Parse(numbers1[i].ToString());
+
+                if (numbers2.Length > i)
+                    secondnumber = int.Parse(numbers2[i].ToString());
+
+                _result[i] = firstnumber + secondnumber;
+            }
 
             return _result;
         }
