@@ -7,6 +7,8 @@ namespace TallerTechnologies.Challenge.Core
     {
         public int[] ConverToArray(string numbers);
         public int[] Reverse(  int[] numbers);
-        public int[] Sum(int[] numbers1, int[] numbers2);
+        public int[] Sum(int[] numbers1, int[] numbers2); 
+        public string ArrayToString(int[] numbers);
+
     }
 }

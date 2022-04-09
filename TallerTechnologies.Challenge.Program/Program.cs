@@ -7,24 +7,14 @@ namespace TallerTechnologies.Challenge.Program
     {
         static void Main(string[] args)
         {
-            Numbers progress = new Numbers(); 
+            Numbers _numbers = new Numbers(); 
 
-            var number1 = progress.ConverToArray(Console.ReadLine());
-            var number2 = progress.ConverToArray(Console.ReadLine());
+            var number1 = _numbers.ConverToArray(Console.ReadLine());
+            var number2 = _numbers.ConverToArray(Console.ReadLine());
              
-            var d = progress.Sum(number1, progress.Reverse(number2));
+            var result = _numbers.Sum(number1, _numbers.Reverse(number2));
 
-            PrintNumber(d);
-        }
-
-        static void PrintNumber(int[] number)
-        {
-            string ToPrint = ""; 
-            foreach (var item in number)
-            {
-                ToPrint = ToPrint + item;
-            } 
-            Console.WriteLine(ToPrint);
-        }
+            Console.WriteLine(_numbers.ArrayToString(result));
+        } 
     }
 }

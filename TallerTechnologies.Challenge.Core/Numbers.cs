@@ -8,6 +8,17 @@ namespace TallerTechnologies.Challenge.Core
 {
     public class Numbers : INumbers
     {
+        public string ArrayToString(int[] numbers)
+        {
+            string ToPrint = "";
+            foreach (var item in numbers)
+            {
+                ToPrint = ToPrint + item;
+            }
+
+            return ToPrint;
+        }
+
         public int[] ConverToArray(string numbers)
         {
             var a = numbers.ToCharArray();
