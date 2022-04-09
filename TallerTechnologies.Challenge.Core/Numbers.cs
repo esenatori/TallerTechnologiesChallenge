@@ -16,9 +16,10 @@ namespace TallerTechnologies.Challenge.Core
             return b;
         }
 
-        public void Reverse(ref int[] numbers)
+        public int[] Reverse(int[] numbers)
         {
-            Array.Reverse(numbers);
+            Array.Reverse(numbers); 
+            return numbers;
         }
 
         public int[] Sum(int[] numbers1, int[] numbers2)
