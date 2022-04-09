@@ -65,4 +65,8 @@
   <ItemGroup>
     <RefactorLog Include="TallerTechnologies.Challenge.SQL.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.FillData.sql" />
+    <None Include="Script.Exercise.sql" />
+  </ItemGroup>
 </Project>
