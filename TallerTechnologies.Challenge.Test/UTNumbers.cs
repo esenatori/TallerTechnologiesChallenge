@@ -21,10 +21,15 @@ namespace TallerTechnologies.Challenge.Test
         }
 
         [Test]
-        public void ConverToArray()
+        public void FirstExample()
         {
-            var a = _numbers.ConverToArray("1234567");
-            Assert.AreEqual(typeof(int[]), a.GetType());
+            int[] mockResult = { 7, 7, 7, 7, 7, 7 };
+
+            var number1 = _numbers.ConverToArray("123456");
+            var number2 = _numbers.ConverToArray("123456"); 
+            var result = _numbers.Sum(number1, _numbers.Reverse(number2));
+            
+            Assert.AreEqual(result, mockResult);
         }
     }
 }
