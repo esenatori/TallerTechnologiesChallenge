@@ -8,19 +8,35 @@ namespace TallerTechnologies.Challenge.Core
 {
     public class Numbers : INumbers
     {
-        public char[] ConverToArray(string numbers)
+        public int[] ConverToArray(string numbers)
         {
-            throw new NotImplementedException();
+            var a = numbers.ToCharArray();
+            int[] b = new int[a.Length];
+            b= Array.ConvertAll(a, c=> (int)Char.GetNumericValue(c));
+            return b; 
         }
 
-        public char[] Reverse(char[] numbers)
+        public void Reverse(ref int[] numbers)
         {
-            throw new NotImplementedException();
+            Array.Reverse(numbers); 
         } 
 
-        public char[] Sum(char[] numbers1, char[] numbers2)
+        public int[] Sum(int[] numbers1, int[] numbers2)
         {
-            throw new NotImplementedException();
+            int lenght = numbers2.Length;
+            if (numbers1.Length > numbers2.Length)
+            {
+                lenght = numbers1.Length;
+            }
+
+            int[] _result = new int[lenght];
+            
+            for (int i = 0; i < lenght; i++)
+            {
+                _result[i] = int.Parse(numbers1[i].ToString()) + int.Parse(numbers2[i].ToString());
+            }    
+
+            return _result;
         }
     }
 }

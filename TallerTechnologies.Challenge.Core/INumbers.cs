@@ -5,8 +5,8 @@ namespace TallerTechnologies.Challenge.Core
 {
     public interface INumbers
     {
-        public char[] ConverToArray(string numbers);
-        public char[] Reverse(char[] numbers);
-        public char[] Sum(char[] numbers1, char[] numbers2);
+        public int[] ConverToArray(string numbers);
+        public void Reverse(ref int[] numbers);
+        public int[] Sum(int[] numbers1, int[] numbers2);
     }
 }
