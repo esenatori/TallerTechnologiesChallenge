@@ -21,6 +21,9 @@ namespace TallerTechnologies.Challenge.Core
 
         public int[] ConverToArray(string numbers)
         {
+            if (numbers==null) 
+                throw new Exception("Invalid Parameter"); 
+
             var a = numbers.ToCharArray();
             int[] b = new int[a.Length];
             b = Array.ConvertAll(a, c => (int)Char.GetNumericValue(c));
@@ -35,6 +38,9 @@ namespace TallerTechnologies.Challenge.Core
 
         public int[] Sum(int[] numbers1, int[] numbers2)
         {
+            if (numbers1 == null || numbers2==null)
+                throw new Exception("Invalid Parameter");
+
             int lenght = numbers2.Length;
             if (numbers1.Length > numbers2.Length)
             {

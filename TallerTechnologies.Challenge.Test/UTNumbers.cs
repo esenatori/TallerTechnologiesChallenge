@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using TallerTechnologies.Challenge.Core;
 
 namespace TallerTechnologies.Challenge.Test
@@ -21,7 +22,7 @@ namespace TallerTechnologies.Challenge.Test
         }
 
         [Test]
-        public void FirstExample()
+        public void MainExample()
         {
             int[] mockResult = { 7, 7, 7, 7, 7, 7 };
 
@@ -30,6 +31,23 @@ namespace TallerTechnologies.Challenge.Test
             var result = _numbers.Sum(number1, _numbers.Reverse(number2));
             
             Assert.AreEqual(result, mockResult);
+        }
+
+        [Test]
+        public void NullValues()
+        {
+
+            try
+            {
+                int[] number1 = null;
+                int[] number2 = null;
+                _numbers.Sum(number1, number2);
+                Assert.Fail();  
+            }
+            catch (Exception ex)
+            {
+                Assert.Pass();
+            } 
         }
     }
 }
